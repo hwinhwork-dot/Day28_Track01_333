@@ -5,6 +5,15 @@
 
 ---
 
+## 0. Thành viên nhóm
+
+| Họ tên | MSSV | Phần phụ trách | Góp ý đã đưa cho nhóm bạn |
+|---|---|---|---|
+| _<điền>_ | _<điền>_ | _<điền>_ | _<điền>_ |
+| _<điền>_ | _<điền>_ | _<điền>_ | _<điền>_ |
+
+> Ghi rõ nhóm bạn đã phản biện chéo ở chặng 3. Bảng này bắt buộc theo §6.3 của bài lab — chưa có tên/MSSV thật nên để nguyên placeholder, cần điền trước khi nộp.
+
 ## 1. Bài này giải quyết gì
 
 Đã mua công cụ AI nhưng công việc vẫn như cũ: nhân viên dùng thử vài lần rồi quay lại
@@ -78,10 +87,12 @@ Các sheet trong workbook dashboard:
 
 ## 7. Thay đổi v1 → v2 (sau kiểm tra chéo)
 
-1. Tách rõ cơ chế Option A/B/C và giữ quyền quyết định của learner (Option C từng bị mô tả lẫn với Option B trong bản v1).
-2. Bổ sung hành vi, chất lượng, bàn giao và logic hành động vào dashboard — bản v1 dễ trượt về lượt dùng và thời gian tiết kiệm tự khai.
-3. Thêm bảng kiểm thử thực tế (3 phiên test độc lập, cả 3 đều chọn Option A) làm bằng chứng cho lựa chọn, kèm giới hạn của bằng chứng đó.
-4. Loại phiên test số 3 khỏi mọi kết luận về Option C do phiên đó vi phạm protocol phỏng vấn và mô tả sai cơ chế C.
+1. **Chỉ số:** Dashboard v1 chỉ đo lượt mở trợ giúp và thời gian tiết kiệm tự khai (activity metric, không dẫn tới quyết định gì). v2 bổ sung chỉ số hành vi (tỷ lệ làm lại), chất lượng/tin cậy (tỷ lệ có nguồn) và rủi ro/bàn giao (tỷ lệ chuyển coach thành công), đồng thời bỏ chỉ số thời gian tiết kiệm tự khai.
+2. **Giải pháp / chia việc:** Workflow TO-BE ở v1 chỉ thêm bước "hỏi AI" mà chưa nói rõ ai chịu trách nhiệm kết quả cuối khi AI không chắc. v2 thêm rõ nguồn kiểm chứng, người chịu trách nhiệm (lab coach) và cách xử lý khi AI không chắc chắn (gắn nhãn → chuyển coach), theo đúng nguyên tắc chia việc của Mollick.
+3. **Nguyên nhân gốc:** Nguyên nhân gốc ở v1 còn gần triệu chứng ("learner chưa quen dùng tutor tích hợp"). Sau khi chạy lại 5 câu hỏi chẩn đoán + ADKAR, v2 chốt lại nguyên nhân là thiếu trích nguồn (Tin cậy) và thiếu đường chuyển coach (Workflow).
+4. **Lộ trình:** Giai đoạn 31–60 và 61–90 ở v1 chưa có owner và dấu hiệu hoàn thành, dễ biến thành lịch cứng. v2 gắn owner cho từng giai đoạn và định nghĩa cổng bằng ngưỡng chỉ số, không phải mốc thời gian.
+
+> Đối chiếu trực tiếp tại `v1/dashboard_hanh_dong_v1.xlsx` (sheet `6_Chi_so`, `4_Workflow_ASIS_TOBE`, `5_Lo_trinh_30_60_90`) so với `dashboard/dashboard_hanh_dong_v2.xlsx`.
 
 ## 8. Quyết định
 
