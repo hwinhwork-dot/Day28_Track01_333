@@ -1,19 +1,23 @@
 # Day 28 · Track 01 — Dashboard Hành Động Cho Áp Dụng AI (v2)
 
-> **Nhóm:** 333 · **Thời lượng:** 120 phút · **Mức:** Trung cấp
-> Trạng thái file: **Đã điền — bản v2, sau kiểm tra chéo.**
+> **Nhóm 333.** Thành viên: Nguyễn Hoàng Minh, Nguyễn Việt Hải, Trịnh Hải Đăng.
+> Trạng thái: bản v2, đã điền sau kiểm tra chéo.
+
+Người chấm nên đọc file này trước. Mục 1 là bảng thành viên và đóng góp của từng người. Từ Mục 2 trở đi là toàn bộ kết quả của nhóm, mỗi mục khớp với một yêu cầu đầu ra ở §2.3 của lab.
 
 ---
 
-## 0. Thành viên nhóm
+## 1. Thành viên nhóm
 
-| Họ tên | Mã học viên |
-|---|---|
-| Nguyễn Hoàng Minh | 2A202601764 |
-| Nguyễn Việt Hải | 2A202601656 |
-| Trịnh Hải Đăng | 2A202601602 |
+| Họ tên | MSSV | Phần phụ trách | Góp ý đã đưa cho nhóm bạn |
+| --- | --- | --- | --- |
+| Nguyễn Việt Hải | 2A202601656 | Khoá phạm vi, năm câu hỏi chẩn đoán, tổng hợp README và memo | Nhóm Đức Sơn: phạm vi đang để ở mức cả phòng ban và năm quy trình, nhóm em góp ý khoá lại còn một nhóm người dùng và hai đến ba quy trình để chẩn đoán được sâu; phần "ít người dùng" đang bị ghi là nguyên nhân, nên tách ra làm triệu chứng. |
+| Nguyễn Hoàng Minh | 2A202601764 | Gartner-Lite, phân chia việc theo Mollick, workflow AS-IS và TO-BE | Nhóm Đức Sơn: workflow TO-BE mới vẽ các bước, chưa ghi nguồn kiểm chứng, người chịu trách nhiệm kết quả cuối và cách xử lý khi AI không chắc; nhóm em góp ý bổ sung ba cột này và một bảng Mollick chia rõ phần người giữ quyền với phần AI hỗ trợ. |
+| Trịnh Hải Đăng | 2A202601602 | ADKAR, lộ trình 30–60–90, dashboard chỉ số, bảng ba phiên thử nghiệm | Nhóm Đức Sơn: dashboard đang đo số lượt đăng nhập và số câu hỏi, nhóm em góp ý đây là chỉ số hoạt động, đề xuất đổi sang tỷ lệ câu trả lời có nguồn kiểm chứng và thời gian xử lý lấy từ log tác vụ; lộ trình 30–60–90 đang là danh sách việc, nên gắn mỗi mốc với một điều kiện mở cổng. |
 
-## 1. Bài này giải quyết gì
+Cột góp ý là căn cứ để chấm đóng góp của từng người. Nhóm em kiểm tra chéo với nhóm Đức Sơn, phản biện theo bốn trục phạm vi, framework, chỉ số và hành động.
+
+## 2. Bài này giải quyết gì
 
 Đã mua công cụ AI nhưng công việc vẫn như cũ: nhân viên dùng thử vài lần rồi quay lại
 cách cũ, quản lý thấy số lượt dùng nhưng chưa thấy giá trị. Repo này đi từ triệu chứng
@@ -23,7 +27,7 @@ cách cũ, quản lý thấy số lượt dùng nhưng chưa thấy giá trị. 
 Nguyên tắc: *Sử dụng nhiều ≠ đã áp dụng.* Ứng dụng thật bắt đầu khi **công việc**,
 **trách nhiệm** và **cách kiểm soát** đã thay đổi.
 
-## 2. Cấu trúc repo
+## 3. Cấu trúc repo
 
 ```
 Day28_Track01_333/
@@ -48,9 +52,10 @@ Các sheet trong workbook dashboard:
 | `5_Lo_trinh_30_60_90` | 3 cổng quyết định dựa trên bằng chứng, có owner + dấu hiệu hoàn thành |
 | `6_Chi_so` | ≥1 product metric + ≥1 workflow metric, đủ baseline/target/nguồn/owner/hành động |
 | `7_Quyet_dinh` | tiếp tục / sửa / dừng (chi tiết ở `memo/`) |
-| `8_Thay_doi_v1_v2` | *(chỉ v2)* ≥2 thay đổi sau kiểm tra chéo |
+| `8_Thay_doi_v1_v2` | *(chỉ v2)* các thay đổi sau kiểm tra chéo |
+| `9_Ba_phien_thu` | *(chỉ v2)* bảng ba phiên thử nghiệm, bằng chứng chọn Option A |
 
-## 3. Phạm vi đã khoá
+## 4. Phạm vi đã khoá
 
 - **Sản phẩm AI:** VLearn — trợ lý hỗ trợ learner khi làm bài lab
 - **Nhóm người dùng chính:** Learner đang học lab, đã từng bị kẹt và phải tự xoay xở trong 7 ngày gần đây
@@ -58,14 +63,14 @@ Các sheet trong workbook dashboard:
 - **Ngoài phạm vi:** Rollout toàn khoá học; để AI tự phán đoán đúng/sai thay learner; các điểm kẹt khác ngoài lỗi cài đặt môi trường ở bước 3 của bài lab đang chọn
 - **Mức độ hiện tại:** Usage — learner đã dùng AI tutor tích hợp sẵn nhưng vẫn phải rời nền tảng để tự kiểm chứng; chưa bước vào Pilot có kiểm soát
 
-## 4. Nguyên nhân gốc (1–2, có căn cứ)
+## 5. Nguyên nhân gốc (1–2, có căn cứ)
 
 | # | Nguyên nhân gốc | Framework | Bằng chứng (≥1) |
 |---|---|---|---|
 | 1 | Độ tin cậy không được thiết kế trong lượt trả lời — learner không biết ý nào có nguồn, ý nào không | 5 câu hỏi chẩn đoán (trục Tin cậy) | Learner: "Anh chụp slide lên... anh buộc phải tin thôi" — không kiểm chứng được nên buộc phải tin |
 | 2 | Workflow không có đường bàn giao ít ma sát sang coach khi AI không đủ căn cứ | 5 câu hỏi chẩn đoán (trục Workflow) + Mollick (bàn giao người–AI) | Learner rời nền tảng đi hỏi AI ngoài (Claude/ChatGPT) dù đã thử AI tutor tích hợp trước |
 
-## 5. Giải pháp + Lộ trình 30–60–90
+## 6. Giải pháp và lộ trình 30–60–90
 
 | Giai đoạn | Mục tiêu | Owner | Dấu hiệu hoàn thành (cổng) |
 |---|---|---|---|
@@ -73,7 +78,7 @@ Các sheet trong workbook dashboard:
 | 31–60 | Chứng minh chất lượng: bật trích nguồn, QA mẫu hàng tuần, thêm chuyển coach, hỗ trợ learner tại workflow | QA owner + lab coach | Tỷ lệ câu trả lời có nguồn và tỷ lệ hoàn thành không phải làm lại đạt mục tiêu nhóm. Nếu xấu, tăng QA và thu hẹp phạm vi |
 | 61–90 | Quyết định mở rộng: so với baseline, chốt owner vận hành, kiểm tra quyền truy cập và consent, review chi phí | Product owner + governance owner | Chỉ mở rộng khi chất lượng, hành vi và giá trị cùng đạt ngưỡng. Nếu không, sửa hoặc dừng pilot |
 
-## 6. Chỉ số chính
+## 7. Chỉ số chính
 
 | Cấp | Chỉ số | Baseline | Target | Nguồn | Owner | Hành động khi xấu |
 |---|---|---|---|---|---|---|
@@ -84,18 +89,16 @@ Các sheet trong workbook dashboard:
 | Workflow | Kết quả nghiệp vụ (tỷ lệ hoàn thành bước lab) | Baseline tuần 1 | Tăng mà không làm tăng lỗi bài tập | Hệ thống lab / bài nộp | Chủ nghiệp vụ | So sánh nhóm, điều chỉnh hoặc dừng |
 | Workflow | Rủi ro / bàn giao (tỷ lệ câu hỏi không neo được, tỷ lệ chuyển coach thành công) | Ghi hiện trạng | Có ngưỡng cảnh báo được nhóm xác nhận | Log lỗi và Support Queue | AI owner + coach | Bổ sung fallback, không để learner bị kẹt im lặng |
 
-## 7. Thay đổi v1 → v2 (sau kiểm tra chéo)
+## 8. Thay đổi so với bản v1 (sau kiểm tra chéo)
 
-1. **Chỉ số:** Dashboard v1 chỉ đo lượt mở trợ giúp và thời gian tiết kiệm tự khai (activity metric, không dẫn tới quyết định gì). v2 bổ sung chỉ số hành vi (tỷ lệ làm lại), chất lượng/tin cậy (tỷ lệ có nguồn) và rủi ro/bàn giao (tỷ lệ chuyển coach thành công), đồng thời bỏ chỉ số thời gian tiết kiệm tự khai.
-2. **Giải pháp / chia việc:** Workflow TO-BE ở v1 chỉ thêm bước "hỏi AI" mà chưa nói rõ ai chịu trách nhiệm kết quả cuối khi AI không chắc. v2 thêm rõ nguồn kiểm chứng, người chịu trách nhiệm (lab coach) và cách xử lý khi AI không chắc chắn (gắn nhãn → chuyển coach), theo đúng nguyên tắc chia việc của Mollick.
-3. **Nguyên nhân gốc:** Nguyên nhân gốc ở v1 còn gần triệu chứng ("learner chưa quen dùng tutor tích hợp"). Sau khi chạy lại 5 câu hỏi chẩn đoán + ADKAR, v2 chốt lại nguyên nhân là thiếu trích nguồn (Tin cậy) và thiếu đường chuyển coach (Workflow).
-4. **Lộ trình:** Giai đoạn 31–60 và 61–90 ở v1 chưa có owner và dấu hiệu hoàn thành, dễ biến thành lịch cứng. v2 gắn owner cho từng giai đoạn và định nghĩa cổng bằng ngưỡng chỉ số, không phải mốc thời gian.
+1. Tách rõ cơ chế Option A/B/C và giữ quyền quyết định của learner (Option C từng bị mô tả lẫn với Option B trong bản v1).
+2. Bổ sung hành vi, chất lượng, bàn giao và logic hành động vào dashboard — bản v1 dễ trượt về lượt dùng và thời gian tiết kiệm tự khai.
+3. Thêm bảng kiểm thử thực tế (3 phiên test độc lập, cả 3 đều chọn Option A) làm bằng chứng cho lựa chọn, kèm giới hạn của bằng chứng đó.
+4. Loại phiên test số 3 khỏi mọi kết luận về Option C do phiên đó vi phạm protocol phỏng vấn và mô tả sai cơ chế C.
 
-> Đối chiếu trực tiếp tại `v1/dashboard_hanh_dong_v1.xlsx` (sheet `6_Chi_so`, `4_Workflow_ASIS_TOBE`, `5_Lo_trinh_30_60_90`) so với `dashboard/dashboard_hanh_dong_v2.xlsx`.
+## 9. Quyết định
 
-## 8. Quyết định
-
-**TIẾP TỤC** — pilot Option A trong một nhóm, một bài lab; bổ sung fallback chuyển coach cho câu trả lời không có căn cứ; chưa rollout rộng. Chi tiết: [`memo/memo_quyet_dinh.md`](memo/memo_quyet_dinh.md).
+Nhóm quyết định **TIẾP TỤC**. Nhóm chạy pilot Option A trong một nhóm learner và một bài lab, bổ sung đường chuyển coach cho các câu trả lời không có căn cứ trong tài liệu, và chưa mở rộng ra ngoài phạm vi này. Lý do và bước tiếp theo được ghi đầy đủ trong [`memo/memo_quyet_dinh.md`](memo/memo_quyet_dinh.md).
 
 ---
 
@@ -112,7 +115,7 @@ Các sheet trong workbook dashboard:
 
 ## Phụ lục — Dashboard hành động v2 (bản đầy đủ)
 
-§6 ở trên là bản rút gọn cho README. Bảng dưới đây là bản dashboard v2 gốc, đầy đủ 5 tầng đo (sử dụng → hành vi → năng suất → chất lượng/tin cậy → giá trị), khớp với `dashboard/dashboard_hanh_dong_v2.xlsx`:
+Mục chỉ số ở trên là bản rút gọn cho README. Bảng dưới đây là bản dashboard v2 đầy đủ, theo năm tầng đo là sử dụng, hành vi, năng suất, chất lượng và độ tin cậy, giá trị. Bảng này khớp với `dashboard/dashboard_hanh_dong_v2.xlsx`:
 
 | Chỉ số | Mốc đầu | Mục tiêu pilot | Nguồn dữ liệu | Phụ trách | Khi chỉ số xấu |
 | --- | --- | --- | --- | --- | --- |
