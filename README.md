@@ -7,12 +7,11 @@
 
 ## 0. Thành viên nhóm
 
-| Họ tên | MSSV | Phần phụ trách | Góp ý đã đưa cho nhóm bạn |
-|---|---|---|---|
-| _<điền>_ | _<điền>_ | _<điền>_ | _<điền>_ |
-| _<điền>_ | _<điền>_ | _<điền>_ | _<điền>_ |
-
-> Ghi rõ nhóm bạn đã phản biện chéo ở chặng 3. Bảng này bắt buộc theo §6.3 của bài lab — chưa có tên/MSSV thật nên để nguyên placeholder, cần điền trước khi nộp.
+| Họ tên | Mã học viên |
+|---|---|
+| Nguyễn Hoàng Minh | 2A202601764 |
+| Nguyễn Việt Hải | 2A202601656 |
+| Trịnh Hải Đăng | 2A202601602 |
 
 ## 1. Bài này giải quyết gì
 
